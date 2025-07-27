@@ -20,3 +20,7 @@ command: ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Passwor
 $ chmod +x ssh-rate-limit.py
 
 $ python3 ssh-rate-limit.py -p 22 -uf usernamelist.txt -pf passwordlist.txt -n 1 -d 0.2 -t 4 10.0.0.1
+
+# Successful Excution Example:
+Attempt 1 (User: 'root', Pass: 'webadmin', Combo Attempt: 1/1)... Authentication failed for root:webadmin in 0.28 seconds. Output: 'Warning: Permanently added '10.0.0.1' (RSA) to the list of known hosts.
+root@10.0.0.1: Permission denied (password,publickey).'
