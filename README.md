@@ -17,8 +17,14 @@ command: ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Passwor
 -t 4: (Optional) Connection/command timeout for each attempt in seconds (defaults to 5).
 
 # Steps to execute:
+To install Python 3 on Ubuntu, Kali, etc the basic command is:
+$ sudo apt update
+$ sudo apt install python3
+
+Changing file Permission:
 $ chmod +x ssh-rate-limit.py
 
+SSH Rate Limit Test:
 $ python3 ssh-rate-limit.py -p 22 -uf usernamelist.txt -pf passwordlist.txt -n 1 -d 0.2 -t 4 10.0.0.1
 
 # Successful Excution Example:
