@@ -2,7 +2,7 @@
 Test basic ssh login via password rate limit test, other than nmap, hydra, medusa, etc for Red Team Assignments. Python3 is required.
 
 # Usage
-command: ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Password_Wordlist> -n 1 -d 0.2 -t 4 <IP_Address>
+command: python3 ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Password_Wordlist> -n 1 -d 0.2 -t 4 <IP_Address>
 
 <IP_Address>:Replace with the actual IP address or hostname of the SSH server you have permission to test.
 
