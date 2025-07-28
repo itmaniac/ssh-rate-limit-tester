@@ -35,6 +35,10 @@ $ python3 ssh-rate-limit.py -p 22 -uf usernamelist.txt -pf passwordlist.txt -n 1
 Attempt 1 (User: 'root', Pass: 'webadmin', Combo Attempt: 1/1)... Authentication failed for root:webadmin in 0.28 seconds. Output: 'Warning: Permanently added '10.0.0.1' (RSA) to the list of known hosts.
 root@10.0.0.1: Permission denied (password,publickey).'
 
+# VirusTotal Scan Results:
+
+<img width="1599" height="244" alt="image" src="https://github.com/user-attachments/assets/dd167a43-46ab-4463-9c1d-485ebaf6c616" />
+
 # DISCLAIMER: 
 This script is provided for EDUCATIONAL and LEGAL PENETRATION TESTING PURPOSES ONLY. 
 The author does not condone or support any illegal or unauthorized use of this tool.
