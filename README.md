@@ -23,7 +23,11 @@ $ sudo apt update
 
 $ sudo apt install python3
 
-Changing file Permission:
+Downloading & Changing file Permission:
+
+$ git clone https://github.com/itmaniac/ssh-rate-limit-tester.git
+
+$ cd ssh-rate-limit-tester
 
 $ chmod +x ssh-rate-limit.py
 
