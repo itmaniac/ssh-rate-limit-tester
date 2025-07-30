@@ -1,20 +1,20 @@
 # ssh-rate-limit-tester
-Test basic ssh login via password rate limit test, other than nmap, hydra, medusa, etc for Red Team Assignments. Python3 is required.
+This script allows testing basic SSH login password rate limits during **Red Team Assignments** in a manner less likely to trigger Security Operations Center (SOC) alerts, serving as an alternative to brute-force tools such as Nmap, Hydra, or Medusa. Crucially, as this is a custom script with less known signatures, it helps avoid detection based on common tool signatures that SOCs often monitor. However, this simplicity comes with inherent limitations, making it far less robust than those dedicated tools.
 
 # Usage
-command: python3 ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Password_Wordlist> -n 1 -d 0.2 -t 4 <IP_Address>
+**command:** python3 ssh-rate-limit.py -p <port_number> -uf <Username_Wordlist> -pf <Password_Wordlist> -n 1 -d 0.2 -t 4 <IP_Address>
 
-<IP_Address>:Replace with the actual IP address or hostname of the SSH server you have permission to test.
+<**IP_Address**>:Replace with the actual IP address or hostname of the SSH server you have permission to test.
 
--uf <Username_Wordlist>: Path to your username list file.
+**-uf** <Username_Wordlist>: Path to your username list file.
 
--pf <Password_Wordlist>: Path to your password list file.
+**-pf** <Password_Wordlist>: Path to your password list file.
 
--n 5: (Optional) Number of attempts for each username-password combination (defaults to 1).
+**-n** <No.>: (Optional) Number of attempts for each username-password combination (defaults to 1).
 
--d 0.2: (Optional) Delay between each individual attempt in seconds (defaults to 0.1).
+**-d** <No.>: (Optional) Delay between each individual attempt in seconds (defaults to 0.1).
 
--t 4: (Optional) Connection/command timeout for each attempt in seconds (defaults to 5).
+**-t** <No.>: (Optional) Connection/command timeout for each attempt in seconds (defaults to 5).
 
 # Steps to execute:
 To install Python 3 on Ubuntu, Kali, etc the basic command is:
@@ -23,7 +23,7 @@ $ sudo apt update
 
 $ sudo apt install python3
 
-Downloading & Changing file Permission:
+**Downloading & Changing file Permission:**
 
 $ git clone https://github.com/itmaniac/ssh-rate-limit-tester.git
 
@@ -31,7 +31,7 @@ $ cd ssh-rate-limit-tester
 
 $ chmod +x ssh-rate-limit.py
 
-SSH Rate Limit Test:
+**SSH Rate Limit Test:**
 
 $ python3 ssh-rate-limit.py -p 22 -uf usernamelist.txt -pf passwordlist.txt -n 1 -d 0.2 -t 4 10.0.0.1
 
@@ -47,14 +47,14 @@ root@10.0.0.1: Permission denied (password,publickey).'
 This script is provided for EDUCATIONAL and LEGAL PENETRATION TESTING PURPOSES ONLY. 
 The author does not condone or support any illegal or unauthorized use of this tool.
 
-USAGE CONDITIONS:
+**USAGE CONDITIONS:**
 1. You must have EXPLICIT WRITTEN PERMISSION from the system owner before testing any SSH service
 2. Use only on systems you own or are legally authorized to test
 3. Comply with all applicable local, national, and international laws
 4. Never use this tool against production systems without proper authorization
 5. Any credentials used must be test accounts or dummy credentials
 
-By using this script, you agree that:
+**By using this script, you agree that:**
 - You are solely responsible for any consequences of its use
 - The author bears no liability for misuse or damages
 - You will not use this tool for any malicious purposes
